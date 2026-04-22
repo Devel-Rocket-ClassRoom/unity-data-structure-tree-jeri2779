@@ -1,16 +1,15 @@
 using UnityEngine;
 
-public class TreeNode<TKey, Tvalue>
+public class TreeNode<TKey, TValue>
 
 {
     public TKey Key { get; set; }
-    public Tvalue Value { get; set; }   
+    public TValue Value { get; set; }   
     public int Height { get; set; }
 
-    public TreeNode<TKey, Tvalue> Left { get; set; }
-    public TreeNode<TKey, Tvalue> Right { get; set; }
-
-    public TreeNode(TKey key, Tvalue value)
+    public TreeNode<TKey, TValue> Left { get; set; }
+    public TreeNode<TKey, TValue> Right { get; set; }
+    public TreeNode(TKey key, TValue value)
     {
         Key = key;
         Value = value;

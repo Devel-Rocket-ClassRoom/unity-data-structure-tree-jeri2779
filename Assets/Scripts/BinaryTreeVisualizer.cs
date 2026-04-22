@@ -122,7 +122,7 @@ public class BinaryTreeVisualizer : MonoBehaviour
 
         if (node.Left != null) DrawLine(node.Key, node.Left.Key);
         if (node.Right != null) DrawLine(node.Key, node.Right.Key);
-
+        
         CreateEdges(node.Left);
         CreateEdges(node.Right);
 
@@ -136,8 +136,8 @@ public class BinaryTreeVisualizer : MonoBehaviour
         Vector3 endPos = nodeMap[endKey].transform.position; 
 
         lineRender.positionCount = 2;
-        lineRender.SetPosition(0, startPos);
-        lineRender.SetPosition(1, endPos);
+        lineRender.SetPosition(0, startPos + Vector3.forward * 0.1f);
+        lineRender.SetPosition(1, endPos + Vector3.forward * 0.1f);
 
         lineObjects.Add(lines);
     }
