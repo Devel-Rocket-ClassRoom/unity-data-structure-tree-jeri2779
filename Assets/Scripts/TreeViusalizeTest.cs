@@ -146,7 +146,7 @@ public class TreeVisualizeTest : MonoBehaviour
 
         if (added < nodeCount)
         {
-            Debug.LogWarning($"{added}개 추가.");
+            Debug.LogWarning($"{added}+");
         }
     }
 
