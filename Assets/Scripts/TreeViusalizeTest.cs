@@ -56,21 +56,21 @@ public class TreeVisualizeTest : MonoBehaviour
         {
             visualizer.spacingType = TreeVisualizer.SpacingType.InOrder;
             Debug.Log("SpacingType: InOrder");
-            Redraw();
+            DrawTreeType();
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
             visualizer.spacingType = TreeVisualizer.SpacingType.Pow;
             Debug.Log("SpacingType: Pow");
-            Redraw();
+            DrawTreeType();
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
             visualizer.spacingType = TreeVisualizer.SpacingType.LevelOrder;
             Debug.Log("SpacingType: LevelOrder");
-            Redraw();
+            DrawTreeType();
         }
 
         // 노드 추가
@@ -92,15 +92,15 @@ public class TreeVisualizeTest : MonoBehaviour
     }
 
      
-    private void Redraw()
+    private void DrawTreeType()
     {
         if (visualizer.treeType == TreeVisualizer.TreeType.BST)
         {
-            visualizer.DrawTree(bst.Root);
+            visualizer.DrawTree(bst.Root);//BST 트리  그리기
         }
         else
         {
-            visualizer.DrawTree(avl.Root);
+            visualizer.DrawTree(avl.Root);//AVL 트리 그리기
         }
     }
 
@@ -108,15 +108,15 @@ public class TreeVisualizeTest : MonoBehaviour
     private void AddNodes()
     {
         int added = 0;
-        int attempts = 0;
-        int maxAttempts = nodeCount * 10;
+        int attempts = 0;//시도 횟수
+        int maxAttempts = nodeCount * 10; // 중복된 키 나올 경우 횟수 제한 
 
-        if (visualizer.treeType == TreeVisualizer.TreeType.BST)
+        if (visualizer.treeType == TreeVisualizer.TreeType.BST)//BST 선택 시 노드 추가
         {
             while (added < nodeCount && attempts < maxAttempts)
             {
-                int key = Random.Range(minKey, maxKey + 1);
-                if (!bst.ContainsKey(key))
+                int key = Random.Range(minKey, maxKey + 1);//랜덤 키 생성
+                if (!bst.ContainsKey(key))                  //중복 키 체크
                 {
                     bst.Add(key, key.ToString());
                     insertedKeys.Add(key);

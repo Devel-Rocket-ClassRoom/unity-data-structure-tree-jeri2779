@@ -818,6 +818,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1440277807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1440277809}
+  - component: {fileID: 1440277808}
+  m_Layer: 0
+  m_Name: PriorityQueueTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1440277808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440277807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db17d775fc111ba4e80a9f9c06d9af5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PriorityQueueTest
+--- !u!4 &1440277809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440277807}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 124.13651, y: 3.85283, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045761966
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,15 +937,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045761966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999f9c709b617a146af22a5b1ab681d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeVisualizeTest
   visualizer: {fileID: 2045761971}
-  nodeCount: 10
+  nodeCount: 15
   minKey: 1
-  maxKey: 1000
+  maxKey: 100
 --- !u!114 &2045761971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -909,14 +953,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045761966}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3d9c636a97739cc43b5124e79d7b54b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreeVisualizer
   nodePrefab: {fileID: 6194973503116894954, guid: 56e1d4ccd6e7e2b42be33c6c5988e2b2, type: 3}
-  horizontalSpacing: 2
-  verticalSpacing: 2
+  horizontalSpacing: 1.5
+  verticalSpacing: 3
   cameraPadding: 5
   treeType: 0
   spacingType: 0
@@ -931,3 +975,4 @@ SceneRoots:
   - {fileID: 935887276}
   - {fileID: 313247131}
   - {fileID: 2045761969}
+  - {fileID: 1440277809}
